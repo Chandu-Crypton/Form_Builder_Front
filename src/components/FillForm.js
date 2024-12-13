@@ -11,7 +11,7 @@ const FillForm = () => {
 
         const fetchForm = async () => {
             try {
-                const response = await axios.get(`https://form-builder-back-3.onrender.com/api/forms/form/${formId}`);
+                const response = await axios.get(`https://form-builder-back-4.onrender.com/api/forms/form/${formId}`);
                 setForm(response.data);
             } catch (error) {
                 console.log("Error fetching form:", error);
@@ -27,7 +27,7 @@ const FillForm = () => {
 
     const handleSubmit = async () => {
         try {
-            await axios.post(`https://form-builder-back-3.onrender.com/api/forms/form/${formId}/response`, {
+            await axios.post(`https://form-builder-back-4.onrender.com/api/forms/form/${formId}/response`, {
                 responses: Object.entries(responses).map(([questionId, answer]) => ({
                     questionId,
                     answer,
