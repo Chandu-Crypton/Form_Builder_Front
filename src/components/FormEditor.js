@@ -27,7 +27,7 @@ const FormEditor = () => {
       formData.append("headerImage", headerImage);
 
       formData.append("questions", JSON.stringify(questions));
-      const response = await axios.post("https://form-builder-back-3.onrender.com/api/forms/save", formData);
+      const response = await axios.post("https://form-builder-back-4.onrender.com/api/forms/save", formData);
       const formId = response.data._id;
       alert("Form saved successfully!");
       navigate(`/form/${formId}`);
